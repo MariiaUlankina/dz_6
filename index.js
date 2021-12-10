@@ -1,21 +1,21 @@
-function ask(){
-const words = [];
+function ask() {
+    const words = [];
 
-    for (let step = 0; ; step++){
-        let answer = prompt ('Enter text');
-        if (answer === null || answer === ''){
-            words.pop(answer); 
+    for (let step = 0; ; step++) {
+        let answer = prompt('Enter text');
+        if (answer === 'exit'){
             break;
-            
+        }
+
+
+        if (answer === null || answer === '') {
+            words.pop();
         }
         else {
             words.push(answer);
-        }  
-        
+        }
+        console.log(words);
     }
-
-    console.log(words);
-
 }
 
 
@@ -23,19 +23,20 @@ ask();
 
 
 
-function array (){
+function array() {
     const arr = [];
     let arrNew = [];
 
-    for (let i = 0; i< 100;i++){
+    for (let i = 1; i <= 100; i++) {
         arr.push(i);
-        arrNew = arr.map(function (i){
-            return i*3;
-        });
+        
     }
     console.log(arr);
+    arrNew = arr.map(function (item) {
+        return item * 3;
+    });
     console.log(arrNew);
 
 }
 
-//array();
+array();
